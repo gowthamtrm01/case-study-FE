@@ -4,7 +4,7 @@ import moment from 'moment';
 import {FaTrashAlt} from 'react-icons/fa';
 import axios from 'axios';
 
-import {stateContext} from './../../app';
+import {stateContext} from '../../App';
 
 const Lists = () => {
 

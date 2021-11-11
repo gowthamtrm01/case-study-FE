@@ -8,7 +8,7 @@ import FileBase from 'react-file-base64';
 import axios from 'axios';
 
 import './form.css';
-import {stateContext} from './../../app';
+import {stateContext} from '../../App';
 
 const initialState = { name: '', mobile: '', addOn: '', jobType: '', profilePic: '', location: '', email: '', dob: new Date().toISOString(), hide: false, show: false}
 
