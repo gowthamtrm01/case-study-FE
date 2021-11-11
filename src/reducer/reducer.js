@@ -3,7 +3,6 @@ const reducer = (state = [], action) => {
         case "FETCH_ALL_INFO":
             return action.payload;
         case "ADD_INFO":
-            console.log("add info", action.payload);
             return [...state, action.payload]
         case "DELETE_INFO":
             return state.filter((info) => info._id !== action.id)

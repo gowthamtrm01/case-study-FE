@@ -32,7 +32,7 @@ const App = () => {
     const info = currentId ? state.find(info => info._id === currentId) : null;
 
     useEffect(() =>{
-      axios.get('http://localhost:5000/all').then((res) => dispatch({
+      axios.get('https://inter-project-backend.herokuapp.com/all').then((res) => dispatch({
           type: 'FETCH_ALL_INFO',
           payload: res.data
       }))
@@ -73,15 +73,14 @@ const App = () => {
 
     const submit = (e) => {
       e.preventDefault();
-      console.log(postData);
       if(postData !== initialState){
           if(currentId){
-            axios.patch(`http://localhost:5000/update/${postData._id}`, { ...postData }).then((res) => dispatch({
+            axios.patch(`https://inter-project-backend.herokuapp.com/update/${postData._id}`, { ...postData }).then((res) => dispatch({
                 type: 'UPDATE_INFO',
                 payload: res.data
             }))
           }else{
-            axios.post('http://localhost:5000/add', { ...postData }).then((res) => dispatch({
+            axios.post('https://inter-project-backend.herokuapp.com/add', { ...postData }).then((res) => dispatch({
                 type: 'ADD_INFO',
                 payload: res.data
             }))

@@ -34,7 +34,7 @@ const Lists = () => {
     }
 
     const onDelete = (id) => {
-        axios.delete(`http://localhost:5000/delete/${id}`).then((res) => dispatch({
+        axios.delete(`https://inter-project-backend.herokuapp.com/delete/${id}`).then((res) => dispatch({
             type: "DELETE_INFO",
             id
         }))

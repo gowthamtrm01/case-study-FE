@@ -30,13 +30,13 @@ const From = () => {
         e.preventDefault();
         if(postData !== initialState){
             if(currentId){
-                axios.patch(`http://localhost:5000/update/${postData._id}`, { ...postData }).then((res) => dispatch({
+                axios.patch(`https://inter-project-backend.herokuapp.com/update/${postData._id}`, { ...postData }).then((res) => dispatch({
                     type: 'UPDATE_INFO',
                     payload: res.data
                 }))
             }else{
                 console.log("add-method", postData)
-                axios.post('http://localhost:5000/add', { ...postData }).then((res) => dispatch({
+                axios.post('https://inter-project-backend.herokuapp.com/add', { ...postData }).then((res) => dispatch({
                     type: 'ADD_INFO',
                     payload: res.data
                 }))
