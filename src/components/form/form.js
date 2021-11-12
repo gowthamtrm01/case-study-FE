@@ -93,9 +93,7 @@ const From = () => {
                             <div className="calendar-container">
                                 <DatePicker className="datepicker" selected={date} 
                                     onChange={(da) => {
-                                        console.log(da);
                                         setDate(da)
-                                        console.log('date',date);
                                         setPostData({...postData, dob: da.toISOString()})
                                     }  } />
                                 <div className="icon-container">

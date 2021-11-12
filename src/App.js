@@ -46,10 +46,9 @@ const App = () => {
 
     const onSearch = (e) => {
         const value = e.target.value;
-        console.log(value);
         if (value) {
             const filtersObj = state.map((info) => {
-              if (info.name.toLowerCase().includes(value.toLowerCase())) {
+              if (!info.name.toLowerCase().includes(value.toLowerCase())) {
                 info.hide = true;
                 return info
               }
@@ -153,9 +152,7 @@ const App = () => {
                               <div className="calendar-container">
                                   <DatePicker className="datepicker" selected={date} 
                                       onChange={(da) => {
-                                          console.log(da);
                                           setDate(da)
-                                          console.log('date',date);
                                           setPostData({...postData, dob: da.toISOString()})
                                       }  } />
                                   <div className="icon-container">
