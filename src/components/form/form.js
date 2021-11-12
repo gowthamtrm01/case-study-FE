@@ -14,7 +14,6 @@ const initialState = { name: '', mobile: '', addOn: '', jobType: '', profilePic:
 
 const From = () => {
 
-
     const [postData, setPostData] = useState(initialState);
     const [date, setDate] = useState(new Date());
     const {state, dispatch, setCurrentId, currentId, mobileView} = useContext(stateContext);
