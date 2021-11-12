@@ -35,7 +35,6 @@ const From = () => {
                     payload: res.data
                 }))
             }else{
-                console.log("add-method", postData)
                 axios.post('https://inter-project-backend.herokuapp.com/add', { ...postData }).then((res) => dispatch({
                     type: 'ADD_INFO',
                     payload: res.data
